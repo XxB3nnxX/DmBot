@@ -8,7 +8,7 @@ import colorsys
 import random
 import time
 
-client = commands.Bot(command_prefix = '+', case_insensitive=True)
+client = commands.Bot(command_prefix = '$', case_insensitive=True)
 Client = discord.client
 Clientdiscord = discord.Client()
 
@@ -17,7 +17,7 @@ async def on_ready():
     print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
     print('--------')
     print('--------')
-    print('CREATED AND HOSTED BY SUBHANKAR DAS')
+
 
 @client.command(pass_context = True)
 @commands.has_permissions(kick_members=True)     
@@ -41,7 +41,7 @@ async def send(ctx, *, content: str):
                 await client.say("DM Sent To : {} :white_check_mark:  ".format(member))
             except:
                 print("can't")
-                await client.say("DM can't Sent To : {} :x: ".format(member))
+                await client.say("Cant send DM To : {} :x: ".format(member))
 
 
-client.run("YOUR BOT'S TOKEN HERE")                
+client.run("NzU0MDMxOTQwMDAwMjg0Nzcy.X1u09w.A6LRtJtSxMNiiBeavKN-mwIlaTM")                
